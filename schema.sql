@@ -1,8 +1,4 @@
-/* Database schema to keep the structure of entire database. */
-
--- CREATE TABLE animals (
---     name varchar(100)
--- );
+-- project one
 CREATE TABLE animals (
    id serial PRIMARY KEY,
    name varchar(200),
@@ -11,3 +7,8 @@ CREATE TABLE animals (
    neutered boolean,
    weight_kg decimal
 );
+
+-- project two
+BEGIN;
+ALTER TABLE animals
+ADD COLUMN species VARCHAR(255);
