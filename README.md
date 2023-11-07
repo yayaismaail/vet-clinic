@@ -42,6 +42,9 @@
 - **[Create tables in SQL]**
 - **[Insert and query data in SQL.]**
 - **[Used the correct Gitflow]**
+- **[Use database transactions]**
+- **[Modify and delete data in SQL]**
+- **[Prepare complex queries that answer analytical questions]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,8 +118,8 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add database Use for transactions]**
-- [ ] **[Modify and delete data in SQL]**
+- [ ] **[Use primary key & foreign key mechanism for joining tables]**
+- [ ] **[Query multiple tables]**
 - [ ] **[Prepare complex queries that answer analytical questions]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
