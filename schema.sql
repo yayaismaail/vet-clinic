@@ -12,3 +12,20 @@ CREATE TABLE animals (
 BEGIN;
 ALTER TABLE animals
 ADD COLUMN species VARCHAR(255);
+
+-- project three
+CREATE TABLE owners (
+    id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    full_name VARCHAR(255),
+    age INT
+);
+
+CREATE TABLE species (
+    id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+ALTER TABLE animals
+DROP COLUMN species,
+ADD COLUMN species_id INT,
+ADD COLUMN owner_id INT;
