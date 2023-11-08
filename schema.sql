@@ -29,3 +29,8 @@ ALTER TABLE animals
 DROP COLUMN species,
 ADD COLUMN species_id INT,
 ADD COLUMN owner_id INT;
+
+ALTER TABLE animals 
+ADD species_id int REFERENCES species(id);
+ALTER TABLE animals 
+ADD owner_id int REFERENCES owners(id);
