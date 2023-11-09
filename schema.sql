@@ -34,3 +34,31 @@ ALTER TABLE animals
 ADD species_id int REFERENCES species(id);
 ALTER TABLE animals 
 ADD owner_id int REFERENCES owners(id);
+
+-- project four
+
+-- Create the vets table
+CREATE TABLE vets (
+    id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(255),
+    age INT,
+    date_of_graduation DATE
+);
+
+-- Create the specializations table (join table for vets and species)
+CREATE TABLE specializations (
+    vet_id INT,
+    species_id INT,
+    PRIMARY KEY (vet_id, species_id),
+    FOREIGN KEY (vet_id) REFERENCES vets(id),
+    FOREIGN KEY (species_id) REFERENCES species(id)
+);
+
+-- Create the visits table (join table for animals and vets)
+CREATE TABLE visits (
+    animal_id INT,
+    vet_id INT,
+    visit_date DATE,
+    FOREIGN KEY (animal_id) REFERENCES animals(id),
+    FOREIGN KEY (vet_id) REFERENCES vets(id)
+);
