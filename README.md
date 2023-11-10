@@ -37,10 +37,10 @@
 
 - **[Create tables in SQL]**
 - **[Insert and query data in SQL.]**
-<!-- - **[Used the correct Gitflow]**
+- **[Used the correct Gitflow]**
 - **[Use database transactions]**
 - **[Modify and delete data in SQL]**
-- **[Prepare complex queries that answer analytical questions]** -->
+- **[Prepare complex queries that answer analytical questions]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
