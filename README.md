@@ -9,10 +9,6 @@
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -41,7 +37,10 @@
 
 - **[Create tables in SQL]**
 - **[Insert and query data in SQL.]**
-- **[Used the correct Gitflow]**
+<!-- - **[Used the correct Gitflow]**
+- **[Use database transactions]**
+- **[Modify and delete data in SQL]**
+- **[Prepare complex queries that answer analytical questions]** -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -68,34 +67,9 @@ git clone https://github.com/yayaismaail/vet-clinic
 
 ### Install
 
-1. Install WebHint:
-npm install --save-dev hint@7.x
-
-2. Install StyleLint
-npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-
-### Usage
-
 To run the project, execute the following command:
 
 - open cloned folder in your code editor
-
-### Run tests
-
-To run tests, run the following command:
-
-To run tests and check for errors:
-- After installing the required linter,
-npx stylelint "**/*.{css,scss}"
-
-- To fix CSS or SCSS linters error:
-npx stylelint "**/*.{css,scss}" --fix
-
-### Deployment
-
-You can deploy this project using:
-
--[Deployment Link](https://yayaismaail.github.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,8 +89,8 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add database Use for transactions]**
-- [ ] **[Modify and delete data in SQL]**
+- [ ] **[Use primary key & foreign key mechanism for joining tables]**
+- [ ] **[Query multiple tables]**
 - [ ] **[Prepare complex queries that answer analytical questions]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
