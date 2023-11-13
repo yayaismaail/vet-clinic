@@ -63,7 +63,7 @@ CREATE TABLE visits (
     FOREIGN KEY (vet_id) REFERENCES vets(id)
 );
 
--- project five day one
+-- project five
 CREATE TABLE owners(
   id INT GENERATED ALWAYS AS IDENTITY,
   full_name VARCHAR(20),
