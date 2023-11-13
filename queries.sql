@@ -196,7 +196,7 @@ SELECT s.name, COUNT(*) AS num_visits FROM visits v JOIN animals a ON v.animal_i
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
 -- running the following to get desired Execution time
--- explain analyze SELECT COUNT(*) FROM visits where animal_id = 4;
+explain analyze SELECT COUNT(*) FROM visits where animal_id = 4;
 
 -- Performance audit
 EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
