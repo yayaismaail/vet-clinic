@@ -103,27 +103,15 @@ INSERT INTO visits (animal_id, vet_id, visit_date) VALUES ((SELECT id FROM anima
 INSERT INTO visits (animal_id, vet_id, visit_date) VALUES ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), '2020-05-24');
 INSERT INTO visits (animal_id, vet_id, visit_date) VALUES ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'William Tatcher'), '2021-01-11');
 
+-- project four
+INSERT INTO animals (name) VALUES ('Agumon'), ('Gabumon'), ('Pikachu'), ('Devimon'), ('Charmander'), ('Plantmon'), ('Squirtle'), ('Angemon'), ('Boarmon'), ('Blossom');
 
+INSERT INTO vets (name) VALUES ('William Tatcher'), ('Maisy Smith'), ('Stephanie Mendez'), ('Jack Harkness');
 
--- (Assuming animal IDs exist in the database, adjust as needed)
--- INSERT INTO visits (animal_id, vet_id, visit_date) VALUES
---     (21, 1, '2020-05-24'),
---     (21, 3, '2020-07-22'),
---     (22, 4, '2021-02-02'),
---     (23, 2, '2020-01-05'),
---     (23, 2, '2020-03-08'),
---     (23, 2, '2020-05-14'),
---     (24, 3, '2021-05-04'),
---     (25, 4, '2021-02-24'),
---     (26, 2, '2019-12-21'),
---     (26, 1, '2020-08-10'),
---     (26, 2, '2021-04-07'),
---     (27, 3, '2019-09-29'),
---     (28, 4, '2020-10-03'),
---     (28, 4, '2020-11-04'),
---     (29, 2, '2019-01-24'),
---     (29, 2, '2019-05-15'),
---     (29, 2, '2020-02-27'),
---     (29, 2, '2020-08-03'),
---     (30, 3, '2020-05-24'),
---     (30, 1, '2021-01-11');
+-- Run the following statements to add data to your database
+
+-- This will add 3.594.280 visits considering you have 10 animals, 4 vets, and it will use around ~87.000 timestamps (~4min approx.)
+INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
+
+-- This will add 2.500.000 owners with full_name = 'Owner <X>' and email = 'owner_<X>@email.com' (~2min approx.)
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
